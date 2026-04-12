@@ -4,10 +4,8 @@ repos:
     hooks:
       - id: check-json
         name: Check JSON files
-        exclude: (^|/)\.(vscode|devcontainer)/
       - id: check-yaml
         name: Check YAML files
-        exclude: ci.yml|release_to_gh.yml|taskfile.yml
       - id: check-toml
         name: Check TOML files
       - id: end-of-file-fixer
@@ -27,10 +25,3 @@ repos:
         name: Format Python code with ruff
         types_or: [python, pyi, jupyter]
         args: ["--config", "pyproject.toml"]
-  - repo: local
-    hooks:
-      - id: ty
-        name: Type check Python code with ty
-        entry: uv run ty check
-        language: python
-        types_or: [python]

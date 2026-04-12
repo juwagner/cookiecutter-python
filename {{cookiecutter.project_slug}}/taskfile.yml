@@ -40,7 +40,18 @@ tasks:
   lint:
     cmds:
       - uv tool run pre-commit run --all-files
-    desc: Run linters
+    desc: Run linters on all files
+
+  format:
+    cmds:
+      - uv run ruff check --fix src tests
+      - uv run ruff format src tests
+    desc: Format and fix Python code
+
+  check:
+    cmds:
+      - uv run ruff check src tests
+    desc: Check code without fixing (for CI)
 
   test:
     cmds:

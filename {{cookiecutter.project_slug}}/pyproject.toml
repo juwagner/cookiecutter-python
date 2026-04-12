@@ -27,7 +27,19 @@ package = true
 line-length = 100
 
 [tool.ruff.lint]
-select = ["E", "F", "I"]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # Pyflakes
+    "I",      # isort
+    "UP",     # pyupgrade
+    "N",      # pep8-naming
+    "C4",     # flake8-comprehensions
+    "PIE",    # flake8-pie
+    "SIM",    # flake8-simplify
+]
+ignore = ["E501"]  # Line too long (handled by formatter)
+
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

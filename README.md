@@ -1,6 +1,6 @@
 # cookiecutter-python
 
-A lightweight [Cookiecutter](https://github.com/cookiecutter/cookiecutter) to setup private Python projects quickly.
+A lightweight [Cookiecutter](https://github.com/cookiecutter/cookiecutter) to setup Python projects quickly.
 
 
 - Minimal `src` layout

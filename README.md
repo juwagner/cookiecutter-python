@@ -47,6 +47,3 @@ task lint
 task test
 ```
 
-## Contributing
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).

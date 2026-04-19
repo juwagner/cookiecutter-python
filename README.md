@@ -46,4 +46,3 @@ task setup
 task lint
 task test
 ```
-

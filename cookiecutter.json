@@ -3,5 +3,6 @@
     "project_description": "My project description",
     "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-')|replace('_', '-') }}",
     "package_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
-    "author": "Julian Wagner"
+    "author": "Julian Wagner",
+    "python_version": ["3.12", "3.11", "3.13", "3.14"]
 }

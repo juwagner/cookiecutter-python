@@ -38,11 +38,10 @@ task setup
 
 ### Variable reference
 
-- `project_name`: Human-readable project name (e.g., "My Private Project")
-- `project_slug`: Repository folder name, derived from project name (e.g., `my-private-project`)
-- `package_name`: Python import package, derived from project slug (e.g., `my_private_project`)
+- `project_name`: Human-readable project name (e.g., "My Project")
+- `project_slug`: Repository folder name, derived from project name (e.g., `my-project`)
+- `package_name`: Python import package, derived from project slug (e.g., `my_project`)
 - `author`: Author name
-- `python_version`: Target Python version (3.11, 3.12, 3.13, or 3.14)
 
 ## Generated project structure
 

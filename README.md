@@ -11,13 +11,12 @@ Lightweight [Cookiecutter][1] template for quickly starting Python projects.
 - Testing with [pytest][6]
 - Task automation with [Task][7]
 - CI starter for [GitHub Actions][8]
-- Configurable Python version support (3.11 - 3.14)
 
 ## Prerequisites
 
 - [uv][3]
 - [Task][7]
-- [cookiecutter][1] (`uv tool install cookiecutter`)
+- Python >= 3.12
 
 ## Generate a project
 

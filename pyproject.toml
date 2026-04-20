@@ -1,7 +1,7 @@
 [project]
-name = "cookiecutter-uv"
+name = "cookiecutter-python"
 version = "0.4.3"
-description = "Cookiecutter template for Python using uv"
+description = "Cookiecutter template for Python projects"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

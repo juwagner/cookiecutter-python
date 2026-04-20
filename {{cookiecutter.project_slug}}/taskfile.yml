@@ -1,5 +1,3 @@
-# https://taskfile.dev
-
 version: "3"
 
 tasks:
@@ -40,9 +38,9 @@ tasks:
   lint:
     cmds:
       - uv tool run pre-commit run --all-files
-    desc: Run linters on all files
+    desc: Run linters and formatters on all files
 
   test:
     cmds:
       - uv run pytest
-    desc: Run tests
+    desc: Run pytest tests

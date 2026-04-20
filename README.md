@@ -1,16 +1,17 @@
 # cookiecutter-python
 
-Lightweight [Cookiecutter][1] template for quickly starting private Python projects.
+Lightweight [Cookiecutter][1] template for quickly starting Python projects.
 
-## What you get
+## Features
 
 - Minimal [src layout][2]
 - Dependency management with [uv][3]
 - Quality checks with [pre-commit][4]
 - Linting and formatting with [Ruff][5]
-- Tests with [pytest][6]
+- Testing with [pytest][6]
 - Task automation with [Task][7]
 - CI starter for [GitHub Actions][8]
+- Configurable Python version support (3.11 - 3.14)
 
 ## Prerequisites
 
@@ -20,7 +21,7 @@ Lightweight [Cookiecutter][1] template for quickly starting private Python proje
 
 ## Generate a project
 
-From GitHub:
+### From GitHub
 
 ```bash
 uv tool run cookiecutter https://github.com/juwagner/cookiecutter-python
@@ -28,7 +29,7 @@ cd <project_slug>
 task setup
 ```
 
-From local path:
+### From local path
 
 ```bash
 uv tool run cookiecutter /absolute/path/to/cookiecutter-python
@@ -36,8 +37,13 @@ cd <project_slug>
 task setup
 ```
 
-`project_slug` is the repository folder name (for example `my-private-project`).
-`package_name` is the Python import package (for example `my_private_project`).
+### Variable reference
+
+- `project_name`: Human-readable project name (e.g., "My Private Project")
+- `project_slug`: Repository folder name, derived from project name (e.g., `my-private-project`)
+- `package_name`: Python import package, derived from project slug (e.g., `my_private_project`)
+- `author`: Author name
+- `python_version`: Target Python version (3.11, 3.12, 3.13, or 3.14)
 
 ## Generated project structure
 
@@ -66,11 +72,18 @@ task setup
     └── conftest.py
 ```
 
-## Project workflow
+## Typical workflow
 
-- `task setup` initializes the local dev environment
-- `task lint` runs pre-commit checks on all files
-- `task test` runs pytest
+```bash
+# First time setup
+task setup
+
+# Quality checks (linting + formatting via Ruff)
+task lint
+
+# Run tests
+task test
+```
 
 [1]: https://github.com/cookiecutter/cookiecutter
 [2]: https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/

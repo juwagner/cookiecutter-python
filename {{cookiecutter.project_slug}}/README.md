@@ -4,8 +4,9 @@
 
 ## Prerequisites
 
-- [uv](https://docs.astral.sh/uv/)
-- [Task](https://taskfile.dev/) (optional)
+- [uv][3]
+- [Task][7]
+- Python >= 3.12
 
 ## Setup development environment
 
@@ -13,21 +14,10 @@
 task setup
 ```
 
-This command:
-- Initializes a local Git repository (if not already done)
+- Initializes a local Git repository (if missing)
 - Creates `.env` from `.env.example` (if missing)
-- Installs and configures pre-commit hooks
+- Installs and configures [pre-commit][4] hooks
 - Syncs Python dependencies
-
-### Without Task
-
-```bash
-git init
-cp .env.example .env
-uv sync --all-groups
-uv tool install pre-commit
-uv tool run pre-commit install
-```
 
 ## Project structure
 
@@ -58,15 +48,12 @@ uv tool run pre-commit install
 
 ## Development workflow
 
-### Run linters and formatters
-
 ```bash
 task lint
 ```
 
-This runs pre-commit on all files:
-- Ruff: Linting, formatting, import sorting
-- Pre-commit hooks
+- Performs linting, formatting, and import sorting with [ruff][5]
+- Runs [pre-commit][4] hooks
 
 ### Run tests
 
@@ -74,9 +61,11 @@ This runs pre-commit on all files:
 task test
 ```
 
-### Without Task
+- Runs all tests with [pytest][7]
 
-```bash
-uv run pre-commit run --all-files
-uv run pytest
-```
+
+[3]: https://docs.astral.sh/uv/
+[4]: https://pre-commit.com/
+[5]: https://docs.astral.sh/ruff/
+[6]: https://docs.pytest.org/
+[7]: https://taskfile.dev/

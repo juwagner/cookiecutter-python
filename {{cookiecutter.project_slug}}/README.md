@@ -13,7 +13,39 @@
 task setup
 ```
 
-`task setup` will initialize a local Git repository (if missing), create `.env` from `.env.example`, install pre-commit hooks, and sync dependencies.
+`task setup` will:
+
+- initialize a local Git repository (if missing)
+- create `.env` from `.env.example` (if missing)
+- install pre-commit hooks
+- sync dependencies via `uv`
+
+## Project structure
+
+```text
+{{cookiecutter.project_slug}}/
+├── .env.example
+├── .github/
+│   └── workflows/
+│       └── ci.yaml
+├── .pre-commit-config.yaml
+├── pyproject.toml
+├── README.md
+├── taskfile.yml
+├── data/
+│   └── README.md
+├── notebooks/
+│   └── README.md
+├── src/
+│   └── {{cookiecutter.package_name}}/
+│       ├── __init__.py
+│       ├── config.py
+│       ├── constants.py
+│       ├── logger.py
+│       └── utils.py
+└── tests/
+    └── conftest.py
+```
 
 Without Task:
 
@@ -26,11 +58,13 @@ uv tool run pre-commit install
 
 ## Development workflow
 
-Run linters:
+Run quality checks (lint + auto-fixes):
 
 ```bash
 task lint
 ```
+
+`task lint` runs pre-commit on all files. Import sorting is included via Ruff isort rules.
 
 Run tests:
 
@@ -44,7 +78,3 @@ Without Task:
 uv run pre-commit run --all-files
 uv run pytest
 ```
-
-## Contributing
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).

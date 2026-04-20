@@ -43,7 +43,7 @@ task setup
 │       ├── logger.py         # Logging setup
 │       └── utils.py          # Utilities
 └── tests/
-    └── conftest.py           # Pytest configuration
+    └── conftest.py           # Pytest fixtures
 ```
 
 ## Development workflow
@@ -55,7 +55,6 @@ task lint
 - Performs linting, formatting, and import sorting with [ruff][5]
 - Runs [pre-commit][4] hooks
 
-### Run tests
 
 ```bash
 task test

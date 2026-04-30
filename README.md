@@ -83,6 +83,10 @@ task lint
 task test
 ```
 
+## Contributing
+
+See [Contributing](CONTRIBUTING.md).
+
 [1]: https://github.com/cookiecutter/cookiecutter
 [2]: https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/
 [3]: https://docs.astral.sh/uv/

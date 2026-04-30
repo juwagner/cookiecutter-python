@@ -55,12 +55,15 @@ task lint
 - Performs linting, formatting, and import sorting with [ruff][5]
 - Runs [pre-commit][4] hooks
 
-
 ```bash
 task test
 ```
 
 - Runs all tests with [pytest][7]
+
+## Contributing
+
+See [Contributing](CONTRIBUTING.md).
 
 
 [3]: https://docs.astral.sh/uv/

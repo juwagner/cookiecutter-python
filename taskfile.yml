@@ -34,7 +34,7 @@ tasks:
       - task: init-git-repo
       - task: create-env-file
       - task: install-pre-commit
-      - uv sync --all-groups
+      - uv sync --all-groups --all-extras
     desc: Setup development environment
 
   lint:

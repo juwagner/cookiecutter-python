@@ -6,7 +6,7 @@
 
 - [uv][3]
 - [Task][7]
-- Python >= 3.12
+- Python {{cookiecutter.python_version}}
 
 ## Setup development environment
 

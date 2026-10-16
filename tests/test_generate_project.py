@@ -7,6 +7,7 @@ PROJECT_NAME = "Test Project"
 PROJECT_SLUG = "test-project"
 PACKAGE_NAME = "test_project"
 AUTHOR = "Test Author"
+PYTHON_VERSION = "3.12"
 
 
 def test_generate_project(tmp_path: Path):
@@ -16,6 +17,7 @@ def test_generate_project(tmp_path: Path):
         extra_context={
             "project_name": PROJECT_NAME,
             "author": AUTHOR,
+            "python_version": PYTHON_VERSION,
         },
         output_dir=tmp_path.as_posix(),
     )
@@ -28,3 +30,7 @@ def test_generate_project(tmp_path: Path):
     pyproject_content = (generated_project / "pyproject.toml").read_text(encoding="utf-8")
     assert f'name = "{PROJECT_SLUG}"' in pyproject_content
     assert f'name = "{AUTHOR}"' in pyproject_content
+    assert f'requires-python = ">={PYTHON_VERSION}"' in pyproject_content
+
+    python_version_file = generated_project / ".python-version"
+    assert python_version_file.read_text(encoding="utf-8").strip() == PYTHON_VERSION

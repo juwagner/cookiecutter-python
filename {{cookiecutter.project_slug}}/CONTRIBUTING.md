@@ -1,7 +1,7 @@
 # Contributing
 
 - Make sure to fulfill the prerequisites:
-  - Python 3.12+
+  - Python {{cookiecutter.python_version}}
   - [uv](https://docs.astral.sh/uv/)
   - [Task](https://taskfile.dev/)
 - Setup your environment: `task setup`

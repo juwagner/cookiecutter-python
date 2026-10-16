@@ -1,5 +1,6 @@
 # Custom ignores
-data/
+data/*
+!data/README.md
 
 # Mac
 .DS_Store
